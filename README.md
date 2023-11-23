@@ -117,3 +117,56 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 
 ## Answers
 Please write your answers here
+1. b. A Unix-like operating system
+2. c. BSD
+3. d. simple
+4. b. As interrupts
+5. a. 128
+6. c. Sh
+7. a. Round-robin scheduling
+8. a. Paging
+9. d. Both b and c
+10. b. No
+11. c. MIT
+12. There are 6 states of process in xv6 namely a) Unused b) Embryonic c) Sleeping d) Runnable e) Running f) Zombie
+Unused : Process is not allocated currently.
+Embryonic : Process is created but not in use.
+Sleeping : Process is in waiting state and will be executed if the signal is available for execution.
+Runnable : Process is ready to run and when the schedular will schedule it, it will be executed.
+Running : Process is currenctly running by the cpu.
+Zombie : Process is executed but its exit code is not collected by the parent.
+13. File System Structure in XV6 comprises of a) Inodes, b) Data Blocks, c) Superblock, d) Directory Entries
+Inodes: It contains the metadata about the directories, files, etc.
+Data Blocks: It contains the content of the file which are there in inodes.
+Superblock: It contains the overall metadata/data of the file system in xv6.
+Directory Entries: It contains the filename of the directories present in inodes.
+14. Difference between System Calls and Library Functions in XV6
+System Calls: It interacts with the kernel throught the kernel interface. For example : fork(), read(), etc.
+Library Functions: It contains functions which are called by user or directly by the applications at user-level. For example : printf(), scanf(), etc.
+15. Memory Paging is used to create the map or association between the virtual and physical memory spaces using the pages format.
+Benefits : It simplifies the memory management and also the virtual memory space allocation. It can be used to perform the demand paging also.
+16. Shell commands available in xv6 are : ls, cd, sh
+ls: Lists files and directories in the current location.
+cd: We can change the directory using this command.
+sh: It is used to run the script files.
+17. Process Synchronization in XV6 ensures the execution of process in such a way that it will not create the deadlocks or access the shared memory as intended. It also manages the shared resource.
+Mechanisms in XV6:
+Locks and Semaphores: Used to control access to shared resources.
+18. Interrupt Handling in XV6
+The execution flow of the process is disturbed when interrution occurs.
+Hardware and software events are used to handle it in xv6, allowing the system to manage the processes systematically by keeping track of some outer signals.
+19. Virtual Memory in XV6
+Virtual memory is an abstraction that provides each process with its own address space. It creates the illusion of more extensive memory than physically available.
+Implementation in XV6:
+Paging: Maps virtual to physical addresses.
+Page Faults: Triggered when a required page is not in physical memory.
+Advantages:
+Each process has its own address space.
+Non-contiguous allocation simplifies memory management.
+Efficient use of physical memory.
+20. Boot Process in XV6
+Power-On: Computer is powered on.
+BIOS/UEFI: Executes, performs POST, and locates bootable device.
+Bootloader: Loaded and executed.
+Kernel Loading: Bootloader loads the xv6 kernel into memory.
+
